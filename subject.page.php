@@ -1,7 +1,7 @@
 <?php
-require_once "course.class.php";
-$all = new course();
-$courses = $all->getAll();
+require_once "subject.class.php";
+$all = new subject();
+$subjects = $all->getAll();
 ?>
 <?php include 'includes/head.inc.php'; ?>
     <div class="d-flex flex-row">
@@ -9,7 +9,7 @@ $courses = $all->getAll();
         <div class="course-container w-100">
             <div>
                 <button class="btn btn-primary mt-3 mb-3">
-                <a href="addCourse.page.php" class="text-decoration-none text-light">Add Course</a>
+                <a href="addSubject.page.php" class="text-decoration-none text-light">Add Subject</a>
                 </button>
             </div>
 
@@ -21,22 +21,22 @@ $courses = $all->getAll();
                 <table class="table table-striped table-hover">
                     <tr>
                         <th class="text-center" width="10%">Id</th>
-                        <th class="text-center">Course</th>
+                        <th class="text-center">Subject</th>
                         <th class="text-center w-25">Action</th>
                     </tr>
-                    <?php foreach($courses as $key=>$val) {?>
+                    <?php foreach($subjects as $key=>$val) {?>
                     <tr>
                         <td><?= $val ['id']?></td>
                         <td>
-                            <p><b><?php echo ucwords($val['course']) ?></b></p>
+                            <p><b><?php echo ucwords($val['subject']) ?></b></p>
                             <small><i><?php echo $val['description'] ?></i></small>
                         </td>
                         <td>
                             <button class="btn btn-warning">
-                                <a href="editCourse.page.php?id=<?= $val['id']?>" class="text-decoration-none text-dark">Update</a>
+                                <a href="editSubject.page.php?id=<?= $val['id']?>" class="text-decoration-none text-dark">Update</a>
                             </button>
                             <button class="btn btn-danger">
-                                <a class="text-decoration-none text-dark" href="deleteCourse.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
+                                <a class="text-decoration-none text-dark" href="deleteSubject.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
                             </button>
                         </td>
                     </tr>

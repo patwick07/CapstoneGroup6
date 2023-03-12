@@ -6,7 +6,7 @@
                 <li><p></p></li>
                 <li><a class="text-decoration-none text-light" href="course.page.php">Course</a></li>
                 <li><p></p></li>
-                <li><a class="text-decoration-none text-light" href="#">Subject</a></li>
+                <li><a class="text-decoration-none text-light" href="subject.page.php">Subject</a></li>
                 <li><p></p></li>
                 <li><a class="text-decoration-none text-light" href="#">Class</a></li>
             </ul>
