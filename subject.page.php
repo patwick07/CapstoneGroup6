@@ -15,7 +15,7 @@ $subjects = $all->getAll();
 
             <div class="card">
                 <div class="card-header">
-                    <b>Course List</b>
+                    <b>Subject List</b>
                 </div>
             <div class="card-body">
                 <table class="table table-striped table-hover">
@@ -32,12 +32,14 @@ $subjects = $all->getAll();
                             <small><i><?php echo $val['description'] ?></i></small>
                         </td>
                         <td>
-                            <button class="btn btn-warning">
-                                <a href="editSubject.page.php?id=<?= $val['id']?>" class="text-decoration-none text-dark">Update</a>
-                            </button>
-                            <button class="btn btn-danger">
-                                <a class="text-decoration-none text-dark" href="deleteSubject.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
-                            </button>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="btn btn-warning">
+                                    <a href="editSubject.page.php?id=<?= $val['id']?>" class="text-decoration-none text-dark">Update</a>
+                                </button>
+                                <button class="btn btn-danger">
+                                    <a class="text-decoration-none text-dark" href="deleteSubject.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
+                                </button>
+                            </div>
                         </td>
                     </tr>
                     <?php }?>

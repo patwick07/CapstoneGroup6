@@ -1,7 +1,7 @@
 <?php
-require_once "course.class.php";
-$all = new course();
-$courses = $all->getAll();
+require_once "class.class.php";
+$all = new classes();
+$classes = $all->getAll();
 ?>
 <?php include 'includes/head.inc.php'; ?>
     <div class="d-flex flex-row">
@@ -9,36 +9,32 @@ $courses = $all->getAll();
         <div class="course-container w-100">
             <div>
                 <button class="btn btn-primary mt-3 mb-3">
-                <a href="addCourse.page.php" class="text-decoration-none text-light">Add Course</a>
+                <a href="addClass.page.php" class="text-decoration-none text-light">Add Class</a>
                 </button>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <b>Course List</b>
+                    <b>Class List</b>
                 </div>
             <div class="card-body">
                 <table class="table table-striped table-hover">
                     <tr>
                         <th class="text-center" width="10%">Id</th>
-                        <th class="text-center">Course</th>
+                        <th class="text-center">Class</th>
                         <th class="text-center w-25">Action</th>
                     </tr>
-                    <?php foreach($courses as $key=>$val) {?>
+                    <?php foreach($classes as $key=>$val) {?>
                     <tr>
                         <td><?= $val ['id']?></td>
                         <td>
-                            <p><b><?php echo ucwords($val['course']) ?></b></p>
-                            <small><i><?php echo $val['description'] ?></i></small>
+                            <p><b><?php echo ucwords($val['class']) ?></b></p>
                         </td>
                         <td>
                             <div class="d-flex flex-row justify-content-center">
-                                <button class="btn btn-warning">
-                                    <a href="editCourse.page.php?id=<?= $val['id']?>" class="text-decoration-none text-dark">Update</a>
-                                </button>
-                                <button class="btn btn-danger">
-                                    <a class="text-decoration-none text-dark" href="deleteCourse.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
-                                </button>
+                            <button class="btn btn-danger">
+                                <a class="text-decoration-none text-dark" href="deleteClass.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
+                            </button>
                             </div>
                         </td>
                     </tr>
