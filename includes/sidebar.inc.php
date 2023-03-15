@@ -11,6 +11,8 @@
                 <li><a class="text-decoration-none text-light" href="class.page.php">Class</a></li>
                 <li><p></p></li>
                 <li><a class="text-decoration-none text-light" href="faculty.page.php">Faculty</a></li>
+                <li><p></p></li>
+                <li><a class="text-decoration-none text-light" href="student.page.php">Student</a></li>
             </ul>
         </div>
     </div>
