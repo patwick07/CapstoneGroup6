@@ -18,7 +18,7 @@ $courses = $all->getAll();
                     <b>Course List</b>
                 </div>
             <div class="card-body">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-bordered">
                     <tr>
                         <th class="text-center" width="10%">Id</th>
                         <th class="text-center">Course</th>

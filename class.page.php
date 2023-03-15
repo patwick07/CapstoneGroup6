@@ -18,7 +18,7 @@ $classes = $all->getAll();
                     <b>Class List</b>
                 </div>
             <div class="card-body">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-bordered">
                     <tr>
                         <th class="text-center" width="10%">Id</th>
                         <th class="text-center">Class</th>
@@ -32,9 +32,9 @@ $classes = $all->getAll();
                         </td>
                         <td>
                             <div class="d-flex flex-row justify-content-center">
-                            <button class="btn btn-danger">
-                                <a class="text-decoration-none text-dark" href="deleteClass.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
-                            </button>
+                                <button class="btn btn-danger">
+                                    <a class="text-decoration-none text-dark" href="deleteClass.util.php?id=<?= $val['id']?>&req=delete">Delete</a>
+                                </button>
                             </div>
                         </td>
                     </tr>
